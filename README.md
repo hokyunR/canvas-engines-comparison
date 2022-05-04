@@ -1,10 +1,36 @@
 # Canvas Engines Comparison
 
-https://benchmarks.slaylines.io/
+KonvaJS(canvas), PixiJS(2d webgl), ThreeJS(3d webgl)의 CPU 사용률 비교
 
-## Description
+## 환경
 
-- Up to 8000 different rectangles moving on a canvas with various speed
+모델명: MacBook Pro  
+모델 식별자: MacBookPro17,1  
+칩: Apple M1  
+총 코어 개수: 8(4 성능 및 4 효율)  
+메모리: 16 GB
+
+## 결과
+
+박스 개수에 따른 CPU 사용률
+
+|         | 10    | 2000   |
+| ------- | ----- | ------ |
+| Konva   | 28.6% | 53.3%  |
+| PixiJS  | 49.1% | 63.1%  |
+| ThreeJS | 44.0% | 125.3% |
+
+## 실행 방법
+
+```
+$ yarn install
+$ yarn build
+$ yarn start
+```
+
+## Engine list
+
+- Up to 2000 different rectangles moving on a canvas with various speed
 - Different choice of libraries used to render the scene :
 
 |                                                            | module kb                                                  |
@@ -24,15 +50,3 @@ https://benchmarks.slaylines.io/
 | [Pts](https://github.com/williamngan/pts)                  | ![](https://badgen.net/bundlephobia/min/pts)               |
 | [EaselJS](https://github.com/CreateJS/EaselJS)             | ![](https://badgen.net/bundlephobia/min/@createjs/easeljs) |
 | [SVG.js](https://github.com/svgdotjs/svg.js)               | ![](https://badgen.net/bundlephobia/min/@svgdotjs/svg.js)  |
-
-## Quick Start
-
-```
-$ yarn install
-$ yarn build
-$ yarn start
-```
-
-## Misc
-
-A list of webgl libraries : https://gist.github.com/dmnsgn/76878ba6903cf15789b712464875cfdc
